@@ -15,7 +15,7 @@ class Creature:
         return gain * die_roll * self.level
 
     def __repr__(self):
-        return f"{type(self).__name__}: {self.name} of level {self.level}"
+        return f"Dragon: {self.name} of level {self.level}"
 
 
 class SmallAnimal(Creature):
@@ -40,6 +40,7 @@ class Wizard(Creature):
         else:
             print("The wizard has been DEFEATED!!!")
             return False
+
 
 class Dragon(Creature):
     def __init__(self, name, level, scaliness, breaths_fire):

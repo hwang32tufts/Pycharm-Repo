@@ -9,10 +9,10 @@ class Creature:
         if self.level < 1:
             raise ValueError("level")
 
-    def get_defensive_roll(self, modifier=3):
+    def get_defensive_roll(self, gain=3):
         die_roll = random.randint(1, 12)
 
-        return modifier * die_roll * self.level
+        return gain * die_roll * self.level
 
     def __repr__(self):
         return f"{type(self).__name__}: {self.name} of level {self.level}"
